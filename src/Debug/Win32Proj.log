@@ -1,0 +1,6 @@
+﻿  Assembling main.asm...
+main.asm(61): warning A4014: instructions and initialized data not supported in BSS segments
+main.asm(134): warning A6004: procedure argument or local not referenced : @Char_Height
+main.asm(134): warning A6004: procedure argument or local not referenced : @stBuf
+main.asm(334): warning A6004: procedure argument or local not referenced : @openFileNameStruct
+  Win32Proj.vcxproj -> D:\_SchoolWork\31class\Assembly\hw\assbig\xnotepadsln\Debug\WindowsProj.exe

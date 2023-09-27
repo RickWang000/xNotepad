@@ -1,0 +1,2 @@
+D:\_SchoolWork\31class\Assembly\hw\assbig\Debug\WindowsProj.exe
+D:\_SchoolWork\31class\Assembly\hw\assbig\xnotepadsln\Debug\WindowsProj.exe

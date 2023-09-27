@@ -1,0 +1,58 @@
+# include <resource.h>
+
+//菜单
+# define 	IDM_MAIN			0x1000
+# define 	IDM_OPEN			0x1101
+# define 	IDM_SAVE			0x1102
+# define 	IDM_SAVEAS		0x1103
+# define 	IDM_EXIT				0x1104
+# define 	IDM_NEW			0x1105
+# define 	IDM_REDO			0x1201
+# define 	IDM_UNDO			0x1202
+# define 	IDM_CUT				0x1203
+# define 	IDM_COPY			0x1204
+# define 	IDM_PASTE			0x1205
+# define 	IDM_DELETE			0x1206
+# define 	IDM_FONT			0x1301
+# define 	IDM_ALL				0x1207
+
+
+IDM_MAIN	MENU
+BEGIN
+	popup 	"文件(&F)"
+		BEGIN
+			menuitem	"新建文件(&N)\tCtrl+N", IDM_NEW
+			menuitem 	"打开文件(&O)...\tCtrl+O", IDM_OPEN
+			menuitem 	"保存\tCtrl+S", IDM_SAVE
+			menuitem 	"另存为(&S)...\tCtrl+ALT+S", IDM_SAVEAS
+			menuitem	"退出(&X)\tALt+F4", IDM_EXIT
+		END
+	popup 	"编辑(&E)", 
+		BEGIN
+			menuitem 	"撤销(&Z)...\tCtrl+Z", IDM_UNDO
+			menuitem 	"恢复(&Y)...\tCtrl+Y", IDM_REDO
+			menuitem 	"剪切(&X)...\tCtrl+X", IDM_CUT
+			menuitem 	"复制(&C)...\tCtrl+C", IDM_COPY
+			menuitem 	"粘贴(&V)...\tCtrl+V", IDM_PASTE
+			menuitem 	"删除(&D)...", IDM_DELETE
+			menuitem 	"全选(&A)...\tCtrl+A", IDM_ALL
+			
+			
+		END
+	popup 	"设置(&S)"
+		BEGIN
+			menuitem 	"字体...\tCtrl+T", IDM_FONT
+		END
+END
+//加速键
+# define 	IDA_MAIN	0x2000
+
+IDA_MAIN	ACCELERATORS
+BEGIN
+	"^N", IDM_NEW
+	"^O", 	IDM_OPEN
+	"^S",	IDM_SAVE
+	"S", IDM_SAVEAS, VIRTKEY, CONTROL, ALT
+	"T", IDM_FONT, VIRTKEY, CONTROL
+END
+
